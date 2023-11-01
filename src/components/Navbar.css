@@ -17,14 +17,12 @@
     align-items: center;
     gap: 0.5rem;
     
-
     padding-left: 10px;
     width: 7%;
 }
 
 .navbar-logo {
     height: 2em;
-    /* width: 2em; */
 }
 
 .navbar-li {
@@ -41,5 +39,4 @@
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
-    /* line-height: 2.5rem; */
 }

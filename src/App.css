@@ -54,23 +54,24 @@
   box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
   padding: 8em 0 8em 0;
   text-align: center;
-  
-  /* min-height: 100vh; */
 }
 
   .wrapper.style1 {
     background-image: none;
     background-color: gray;
+    min-height: 80vh;
   }
 
   .wrapper.style2 {
     background-color: #fafafa;
     text-shadow: 1px 1px 0px #fff;
+    min-height: 80vh;
   }
 
   .wrapper.style3 {
     background-color: #f4f4f4;
     text-shadow: 1px 1px 0px #fff;
+    min-height: 80vh;
   }
 
   .wrapper.style4 {
