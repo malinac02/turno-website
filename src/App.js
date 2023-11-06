@@ -87,9 +87,6 @@ function App() {
           <div class="container">
             <header>
               <h1>Design Process</h1>
-              <p>
-                Slides
-              </p>
             </header>
             <div class="row">
               <div class="col-4 col-6-medium col-12-small">
