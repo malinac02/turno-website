@@ -1,5 +1,7 @@
-import CasinoIcon from "@mui/icons-material/Casino";
 import Navbar from "./components/Navbar.js";
+import Home from "./components/Home.js";
+import About from "./components/About.js";
+import DesignProcess from "./components/DesignProcess.js";
 import Button from "@mui/material/Button";
 import TurnoLogo from "./logo.png";
 import "./App.css";
@@ -15,32 +17,18 @@ import A5ppt from "./pdfs/TurnoA5Slides.pptx";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      {/* <Button variant="contained">Hello world</Button> */}
-      <header id="home" className="App-header">
-        <div className="is-flex">
-          <img src={TurnoLogo} alt="Turno logo" />
-          <p>here is the website's main page which will tentatively contain our logo & picture of the app </p>
-        </div>
+      <header>
+        <Navbar />
       </header>
 
-      <body class="is-preload">
-        {/* about */}
+      <main class="is-preload">
+
+        <article id="home" className="App-header">
+          <Home/>
+        </article>
+
         <article id="about" class="wrapper style1">
-          <div class="container">
-            <div class="row">
-              <div class="col-8 col-7-large col-12-medium">
-                <header>
-                  <h1>
-                    About
-                  </h1>
-                </header>
-                <p>
-                  Here we will talk about our app and its features
-                </p>
-              </div>
-            </div>
-          </div>
+          <About/>
         </article>
 
         {/* Features */}
@@ -82,52 +70,8 @@ function App() {
           </div>
         </article>
 
-        {/* Design Process */}
-        <article id="design-process" class="wrapper style3">
-          <div class="container">
-            <header>
-              <h1>Design Process</h1>
-            </header>
-            <div class="row">
-              <div class="col-4 col-6-medium col-12-small">
-                <article class="box style2">
-                  <h3>Needfinding</h3>
-                  <p>
-                    <a href={A1pdf}>PDF</a>
-                    <br/>
-                    <a href={A1ppt}>PPT</a></p>
-                </article>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <article class="box style2">
-                  <h3>POV, HMW, Experience Prototypes </h3>
-                  <p>
-                    <a href={A2pdf}>PDF</a>
-                    <br/>
-                    <a href={A2ppt}>PPT</a>
-                  </p>
-                </article>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <article class="box style2">
-                  <h3>Concept Video</h3>
-                  <p>
-                    <a href={A4pdf}>PDF</a>
-                    <br/>
-                    <a href={A4ppt}>PPT</a>
-                  </p>
-                </article>
-                <article class="box style2">
-                  <h3>Lo-Fidelity Prototype</h3>
-                  <p>
-                    <a href={A5pdf}>PDF</a>
-                    <br/>
-                    <a href={A5ppt}>PPT</a>
-                  </p>
-                </article>
-              </div>
-            </div>
-          </div>
+        <article class="wrapper style3">
+          <DesignProcess/>
         </article>
 
         {/* Team */}
@@ -148,7 +92,7 @@ function App() {
             </li>
           </ul>
         </footer>
-      </body>
+      </main>
     </div>
   );
 }

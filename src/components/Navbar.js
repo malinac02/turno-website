@@ -7,7 +7,7 @@ function Navbar() {
     <div className="navbar-container">
       <div className="navbar-left">
         <CasinoIcon className="die-icon" fontSize="medium"/>
-        <Link className="navbar-text" to="home" spy={true} smooth={true} offset={0} duration={500}>Turno</Link>
+        <Link className="navbar-text" to="home" spy={true} smooth={true} offset={0} duration={500}>Home</Link>
       </div>
       <ul className="navbar-right">
         <li className="navbar-li">

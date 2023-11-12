@@ -10,7 +10,7 @@
 @media (prefers-reduced-motion: no-preference) {
   .die-icon {
     animation: App-logo-spin infinite 20s linear;
-    color: rgb(222, 95, 95);
+    color: #ff7474;
   }
 }
 
