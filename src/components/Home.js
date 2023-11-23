@@ -8,7 +8,7 @@ function Home() {
   return (
     <div>
       <div className="is-flex">
-        <img src={TurnoHomeScreen} alt="Turno Home Screen" class="home-screen"/>
+        <img src={TurnoHomeScreen} alt="Turno Home Screen" class="iphone-image"/>
         <div>
           <CasinoIcon className="die-icon large" fontSize="medium"/>
           <h1>Turno</h1>

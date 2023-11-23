@@ -2,17 +2,8 @@ import Navbar from "./components/Navbar.js";
 import Home from "./components/Home.js";
 import About from "./components/About.js";
 import DesignProcess from "./components/DesignProcess.js";
-import Button from "@mui/material/Button";
-import TurnoLogo from "./logo.png";
 import "./App.css";
-import A1pdf from "./pdfs/TurnoA1Slides.pdf";
-import A1ppt from "./pdfs/TurnoA1Slides.pptx";
-import A2pdf from "./pdfs/TurnoA2Slides.pdf";
-import A2ppt from "./pdfs/TurnoA1Slides.pptx";
-import A4pdf from "./pdfs/TurnoA4Slides.pdf";
-import A4ppt from "./pdfs/TurnoA4Slides.pptx";
-import A5pdf from "./pdfs/TurnoA5Slides.pdf";
-import A5ppt from "./pdfs/TurnoA5Slides.pptx";
+import './fonts.css';
 
 function App() {
   return (
@@ -23,16 +14,16 @@ function App() {
 
       <main class="is-preload">
 
-        <article id="home" className="App-header">
+        <article id="home" className="section home">
           <Home/>
         </article>
 
-        <article id="about" class="wrapper style1">
+        <article id="about" class="section about">
           <About/>
         </article>
 
         {/* Features */}
-        <article id="features" class="wrapper style2">
+        <article id="features" class="section features">
           <div class="container">
             <header>
               <h1>Features</h1>
@@ -70,7 +61,7 @@ function App() {
           </div>
         </article>
 
-        <article class="wrapper style3">
+        <article id="design-process" class="wrapper style3">
           <DesignProcess/>
         </article>
 

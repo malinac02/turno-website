@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'TAN NIMBUS, sans-serif'; */
 }
 
 .App-logo {
@@ -14,8 +16,12 @@
   }
 }
 
-.App-header {
-  /* background-color: #282c34; */
+/* header {
+  position: sticky;
+  top: 0;
+} */
+
+.section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,7 +29,30 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   /* color: white; */
+  background: rgb(255,255,255);
+  /* background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,116,116,1) 100%); */
+
 }
+
+.home {
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgba(255,116,116,1) 0%, rgba(255,255,255) 70%);
+}
+
+.about {
+  background-color: gray;
+  /* background-color: rgba(255,116,116,1); */
+}
+
+.features {
+  background-color: white;
+  /* background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,116,116,1) 100%); */
+}
+
+.design-process {
+  background-color: white;
+}
+
 
 .App-link {
   color: #61dafb;
@@ -55,6 +84,20 @@
   padding: 8em 0 8em 0;
   text-align: center;
 }
+
+  .wrapper.home {
+      /* background-color: #282c34; */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(10px + 2vmin);
+      /* color: white; */
+      background: rgb(255,255,255);
+      background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,116,116,1) 100%);
+
+  }
 
   .wrapper.style1 {
     background-image: none;
