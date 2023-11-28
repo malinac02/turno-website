@@ -20,7 +20,7 @@
   margin: -15px;
 }
 
-.process-col-md-4 {
+.process-column {
   width: calc(33.3333% - 30px);
   margin: 15px;
 }
@@ -44,4 +44,11 @@
 .process-box a {
   color: #4e98e2;
   font-size: 14px;
+}
+
+.process-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
