@@ -7,10 +7,12 @@ import "./App.css";
 import './fonts.css';
 
 function App() {
+  const currentSection = "home";
+  
   return (
     <div className="App">
       <header>
-        <Navbar />
+        <Navbar currentSection={currentSection}/>
       </header>
 
       <main class="is-preload">

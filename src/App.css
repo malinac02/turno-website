@@ -12,7 +12,8 @@
 @media (prefers-reduced-motion: no-preference) {
   .die-icon {
     animation: App-logo-spin infinite 20s linear;
-    color: #ff7474;
+    /* color: #ff7474; */
+    color: white;
   }
 }
 
@@ -36,7 +37,8 @@
 
 .home {
   min-height: 100vh;
-  background: linear-gradient(0deg, rgba(255,116,116,1) 0%, rgba(255,255,255) 70%);
+  /* background: linear-gradient(0deg, rgba(255,116,116,1) 0%, rgba(255,255,255) 70%); */
+  background-color: #ff7474; 
 }
 
 .about {

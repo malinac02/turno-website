@@ -2,9 +2,16 @@ import './Navbar.css';
 import CasinoIcon from '@mui/icons-material/Casino';
 import { Link } from 'react-scroll'
 
-function Navbar() {
+function Navbar({ currentSection }) {
+  let navbarClass = "navbar-container";
+  if (currentSection === "home") {
+    navbarClass += " white-navbar";
+  } else {
+    navbarClass += " pink-navbar";
+  }
+
   return (
-    <div className="navbar-container">
+    <div className={navbarClass} >
       <Link className="navbar-logo navbar-left" to="home" spy={true} smooth={true} offset={0} duration={500}>
         <CasinoIcon className="die-icon" fontSize="medium"/>
         turno
