@@ -1,0 +1,44 @@
+.team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.team-row {
+  display: flex;
+  gap: 20px;
+}
+
+.teammate-container {
+  text-align: center;
+  margin-right: 40px; 
+}
+
+.profile-image-container {
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+h2 {
+  margin: 5px 0;
+}
+
+h4 {
+  color: #555;
+  margin: 0;
+}

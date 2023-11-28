@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar.js";
 import Home from "./components/Home.js";
 import About from "./components/About.js";
 import DesignProcess from "./components/DesignProcess.js";
+import Team from "./components/Team.js";
 import "./App.css";
 import './fonts.css';
 
@@ -67,14 +68,9 @@ function App() {
 
         {/* Team */}
         <article id="team" class="wrapper style2">
-          <h2>Our team</h2>
-          <div className="is-flex">
-            <div>Malina</div>
-            <div>Cecilia</div>
-            <div>Pedro</div>
-            <div>Nazanin</div>
-          </div>
+          <Team />
         </article>
+        
         <footer className="wrapper style4">
           <ul id="copyright">
             <li>&copy; Untitled. All rights reserved.</li>
