@@ -5,10 +5,10 @@ import { Link } from 'react-scroll'
 function Navbar() {
   return (
     <div className="navbar-container">
-      <div className="navbar-left">
+      <Link className="navbar-logo navbar-left" to="home" spy={true} smooth={true} offset={0} duration={500}>
         <CasinoIcon className="die-icon" fontSize="medium"/>
-        <Link className="navbar-logo" to="home" spy={true} smooth={true} offset={0} duration={500}>turno</Link>
-      </div>
+        turno
+      </Link>
       <ul className="navbar-right">
         <li className="navbar-li">
           <Link className="navbar-link" to="about" spy={true} smooth={true} offset={0} duration={500}>About</Link>
