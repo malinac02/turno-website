@@ -1,0 +1,9 @@
+process-container {
+  color: white;
+}
+
+.process-description {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}

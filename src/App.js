@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar.js";
 import Home from "./components/Home.js";
 import About from "./components/About.js";
@@ -6,103 +6,98 @@ import DesignProcess from "./components/DesignProcess.js";
 import Team from "./components/Team.js";
 import "./fonts/Poppins-Medium.woff";
 import "./App.css";
-import './fonts.css';
+import "./fonts.css";
 
 function App() {
-  const [currentSection, setCurrentSection] = useState('home');
+  const [currentSection, setCurrentSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
-      const aboutOffset = document.getElementById('about').offsetTop + 90;
-      const featuresOffset = document.getElementById('features').offsetTop - 100;
-      const designProcessOffset = document.getElementById('design-process').offsetTop - 100;
-      const teamOffset = document.getElementById('team').offsetTop - 100;
+      const aboutOffset = document.getElementById("about").offsetTop + 90;
+      const featuresOffset =
+        document.getElementById("features").offsetTop - 100;
+      const designProcessOffset =
+        document.getElementById("design-process").offsetTop - 100;
+      const teamOffset = document.getElementById("team").offsetTop - 35;
 
       if (scrollPosition < aboutOffset) {
-        setCurrentSection('home');
+        setCurrentSection("home");
       } else if (scrollPosition < featuresOffset) {
-        setCurrentSection('about');
+        setCurrentSection("about");
       } else if (scrollPosition < designProcessOffset) {
-        setCurrentSection('features');
+        setCurrentSection("features");
       } else if (scrollPosition < teamOffset) {
-        setCurrentSection('design-process');
+        setCurrentSection("design-process");
       } else {
-        setCurrentSection('team');
+        setCurrentSection("team");
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <div className="App">
       <header>
-        <Navbar currentSection={currentSection}/>
+        <Navbar currentSection={currentSection} />
       </header>
 
-      <main class="is-preload">
-
+      <main className="is-preload">
         <article id="home" className="section home">
-          <Home/>
+          <Home />
         </article>
 
-        <article id="about" class="section about">
-          <About/>
+        <article id="about" className="section about">
+          <About />
         </article>
 
         {/* Features */}
-        <article id="features" class="section features">
-          <div class="container">
+        <article id="features" className="section features">
+          <div className="container">
             <header>
               <h1>Features</h1>
               <p>Here we will talk about the features of our app</p>
             </header>
-            <div class="row aln-center">
-              <div class="col-4 col-6-medium col-12-small">
-                <section class="box style1">
-                  <span class="icon featured fa-comments"></span>
+            <div className="row aln-center">
+              <div className="col-4 col-6-medium col-12-small">
+                <section className="box style1">
+                  <span className="icon featured fa-comments"></span>
                   <h3>Feature 1</h3>
-                  <p>
-                    Explain
-                  </p>
+                  <p>Explain</p>
                 </section>
               </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <section class="box style1">
-                  <span class="icon solid featured fa-camera-retro"></span>
+              <div className="col-4 col-6-medium col-12-small">
+                <section className="box style1">
+                  <span className="icon solid featured fa-camera-retro"></span>
                   <h3>Feature 2</h3>
-                  <p>
-                    Explain
-                  </p>
+                  <p>Explain</p>
                 </section>
               </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <section class="box style1">
-                  <span class="icon featured fa-thumbs-up"></span>
+              <div className="col-4 col-6-medium col-12-small">
+                <section className="box style1">
+                  <span className="icon featured fa-thumbs-up"></span>
                   <h3>Feature 3</h3>
-                  <p>
-                    Explain
-                  </p>
+                  <p>Explain</p>
                 </section>
               </div>
             </div>
           </div>
         </article>
 
-        <article id="design-process" class="section design-process">
-          <DesignProcess/>
+        <article id="design-process" className="section design-process">
+          <DesignProcess />
         </article>
 
         {/* Team */}
-        <article id="team" class="wrapper style2">
+        <article id="team" className="wrapper style2">
           <Team />
         </article>
-        
+
         <footer className="wrapper style4">
           <ul id="copyright">
             <li>&copy; Untitled. All rights reserved.</li>

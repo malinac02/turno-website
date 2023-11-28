@@ -15,8 +15,10 @@ h1 {
 }
 
 .teammate-container {
-  text-align: center;
-  margin-right: 40px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px; 
 }
 
 .profile-image-container {
