@@ -1,4 +1,5 @@
 import "./DesignProcess.css";
+import { FaFilePdf, FaFilePowerpoint, FaYoutube, FaFileAlt, FaFigma, FaFile, FaMobileAlt } from 'react-icons/fa';
 import A1pdf from "../pdfs/TurnoA1Slides.pdf";
 import A1ppt from "../pdfs/TurnoA1Slides.pptx";
 import A2pdf from "../pdfs/TurnoA2Slides.pdf";
@@ -56,6 +57,28 @@ function DesignProcess() {
     }
   ];
 
+  const getIcon = (type) => {
+    switch(type) {
+      case 'pdf':
+        return <FaFilePdf className="process-icon"/>;
+      case 'ppt':
+        return <FaFilePowerpoint className="process-icon"/>;
+      case 'youtube':
+      case 'video':
+        return <FaYoutube className="process-icon"/>;
+      case 'figma':
+        return <FaFigma className="process-icon"/>;
+      case 'link':
+        return <FaMobileAlt className="process-icon"/>;
+      case 'readme':
+      case 'script':
+      case 'poster':
+        return <FaFileAlt className="process-icon"/>;
+      default:
+        return <FaFile className="process-icon"/>;
+    }
+  };
+
   return (
     <div className="process-container">
       <h2 className="process-title">Our Process</h2>
@@ -71,7 +94,8 @@ function DesignProcess() {
               <h3>{item.title}</h3>
               <p className="process-links">
                 {Object.keys(item).slice(1).map((link, index2) => (
-                  <a key={index2} href={item[link]}>
+                  <a className="process-icon-link" key={index2} href={item[link]} alt={link}>
+                    {getIcon(link)}
                     {link}
                   </a>
                 ))}
