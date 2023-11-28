@@ -1,9 +1,47 @@
-process-container {
+.process-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.process-title {
   color: white;
+  font-size: 24px;
 }
 
 .process-description {
   color: white;
-  font-size: 1rem;
-  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.process-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.process-col-md-4 {
+  width: calc(33.3333% - 30px);
+  margin: 15px;
+}
+
+.process-box {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.process-box h3 {
+  color: white;
+  font-size: 18px;
+}
+
+.process-box p {
+  color: white;
+  font-size: 14px;
+}
+
+.process-box a {
+  color: #4e98e2;
+  font-size: 14px;
 }

@@ -19,7 +19,7 @@ function App() {
       const featuresOffset =
         document.getElementById("features").offsetTop - 100;
       const designProcessOffset =
-        document.getElementById("design-process").offsetTop - 100;
+        document.getElementById("design-process").offsetTop - 40;
       const teamOffset = document.getElementById("team").offsetTop - 35;
 
       if (scrollPosition < aboutOffset) {

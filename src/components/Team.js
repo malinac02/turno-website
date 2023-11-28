@@ -4,22 +4,22 @@ import MalinaHeadshot from "../images/MalinaHeadshot.png";
 function Team() {
   const teammates = [
     {
-      name: "Malina Calarco",
-      role: "Designer & Developer",
-      image: MalinaHeadshot,
-    },
-    {
-      name: "Pedro Civita",
-      role: "Designer & Developer",
-      image: MalinaHeadshot,
-    },
-    {
       name: "Cecilia Conde",
       role: "Designer & Developer",
       image: MalinaHeadshot,
     },
     {
+      name: "Malina Calarco",
+      role: "Designer & Developer",
+      image: MalinaHeadshot,
+    },
+    {
       name: "Nazanin Soltan",
+      role: "Designer & Developer",
+      image: MalinaHeadshot,
+    },
+    {
+      name: "Pedro Civita",
       role: "Designer & Developer",
       image: MalinaHeadshot,
     },
