@@ -24,20 +24,43 @@
     text-align: left;
 }
 
+.home-title-dice {
+    display: flex;
+    align-items: center;
+}
+
+@keyframes moveAndSpin {
+    0%, 100% {
+      transform: translateX(0) rotate(0deg);
+    }
+    50% {
+      transform: translateX(150px) rotate(360deg);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .home-dice {
+      animation: moveAndSpin 8s linear infinite;
+      color: #ff7474;
+      font-size: 75px;
+      margin-bottom: 13px;
+    }
+  }
+
 .home-title {
     font-size: 5rem;
     margin-top: 10px;
-    color: white;
+    color: #ff7474;
 }
 
 .home-subtitle {
-    color: black;
+    color: white;
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
 .home-subtitle2 {
-    color: black;
+    color: white;
     font-size: 1rem;
 }
 
@@ -47,6 +70,6 @@
 }
 
 .iphone-image {
-    height: 80vh;
+    height: 60vh;
     object-fit: cover;
 }

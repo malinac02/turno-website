@@ -4,7 +4,7 @@ import { Link } from 'react-scroll'
 
 function Navbar({ currentSection }) {
   let navbarClass = "navbar-container";
-  if (currentSection === "home") {
+  if (currentSection === "home" || currentSection === "features" || currentSection === "team") {
     navbarClass += " white-navbar";
   } else {
     navbarClass += " pink-navbar";
@@ -13,7 +13,7 @@ function Navbar({ currentSection }) {
   return (
     <div className={navbarClass} >
       <Link className="navbar-logo navbar-left" to="home" spy={true} smooth={true} offset={0} duration={500}>
-        <CasinoIcon className="die-icon" fontSize="medium"/>
+        <CasinoIcon className="die-icon" fontSize="default"/>
         turno
       </Link>
       <ul className="navbar-right">

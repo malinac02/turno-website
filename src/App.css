@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
-  /* font-family: 'TAN NIMBUS, sans-serif'; */
+  font-family: "Medium";
 }
 
 .App-logo {
@@ -9,18 +8,15 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .die-icon {
-    animation: App-logo-spin infinite 20s linear;
-    /* color: #ff7474; */
-    color: white;
-  }
+.die-icon {
+  color: white;
 }
 
-/* header {
-  position: sticky;
-  top: 0;
-} */
+@font-face {
+  font-family: "Medium";
+  src: local("Poppins-Medium"),
+    url("./fonts/Poppins-Medium.woff") format("woff");
+}
 
 .section {
   min-height: 100vh;
@@ -38,7 +34,8 @@
 .home {
   min-height: 100vh;
   /* background: linear-gradient(0deg, rgba(255,116,116,1) 0%, rgba(255,255,255) 70%); */
-  background-color: #ff7474; 
+  /* background-color: #ff7474;  */
+  background-color: black;
 }
 
 .about {
