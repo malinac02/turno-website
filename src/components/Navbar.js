@@ -4,10 +4,10 @@ import { Link } from 'react-scroll'
 
 function Navbar({ currentSection }) {
   let navbarClass = "navbar-container";
-  if (currentSection === "home" || currentSection === "features" || currentSection === "team") {
-    navbarClass += " white-navbar";
+  if (currentSection === "home" || currentSection === "design-process") {
+    navbarClass += " white-text-navbar";
   } else {
-    navbarClass += " pink-navbar";
+    navbarClass += " black-text-navbar";
   }
 
   return (

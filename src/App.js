@@ -15,7 +15,7 @@ function App() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
-      const aboutOffset = document.getElementById('about').offsetTop - 40;
+      const aboutOffset = document.getElementById('about').offsetTop + 90;
       const featuresOffset = document.getElementById('features').offsetTop - 100;
       const designProcessOffset = document.getElementById('design-process').offsetTop - 100;
       const teamOffset = document.getElementById('team').offsetTop - 100;
@@ -94,7 +94,7 @@ function App() {
           </div>
         </article>
 
-        <article id="design-process" class="wrapper style3">
+        <article id="design-process" class="section design-process">
           <DesignProcess/>
         </article>
 

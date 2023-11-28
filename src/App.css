@@ -8,10 +8,6 @@
   pointer-events: none;
 }
 
-.die-icon {
-  color: white;
-}
-
 @font-face {
   font-family: "Medium";
   src: local("Poppins-Medium"),
@@ -39,7 +35,7 @@
 }
 
 .about {
-  background-color: gray;
+  background: linear-gradient(0deg, rgba(255,255,255,0) 80%, rgba(0,0,0,1) 100%);
   /* background-color: rgba(255,116,116,1); */
 }
 
@@ -49,7 +45,7 @@
 }
 
 .design-process {
-  background-color: white;
+  background-color: black;
 }
 
 
