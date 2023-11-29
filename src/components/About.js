@@ -4,9 +4,6 @@ function About() {
   return (
     <div className="content">
       <h2>About</h2>
-      <h6>From the Portuguese word for shift, or round, and the idea of it being your turn. 
-        <b><i>Turno</i></b> Your turn to roll the die and take agency of your life. 
-      </h6>
       <h5>Our Concept Video</h5>
       <iframe
         width="600"
