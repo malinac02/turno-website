@@ -4,14 +4,16 @@
   align-items: center;
 }
 
-h1 {
+.team-title {
   font-size: 36px;
   margin-bottom: 20px;
 }
 
 .team-row {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  /* gap: 15px; */
 }
 
 .teammate-container {
@@ -36,11 +38,25 @@ h1 {
   border-radius: inherit;
 }
 
-h2 {
+.teammate-name {
   margin: 5px 0;
+  font-size: 25px;
 }
 
-h4 {
+.teammate-role {
   color: #555;
   margin: 0;
+  font-family: "Light";
+  font-size: 16px;
+}
+.linkedin {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+}
+
+.linkedin-icon {
+  font-size: 20px;
+  color: #ff7474;
 }

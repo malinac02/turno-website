@@ -96,7 +96,7 @@ function App() {
         </article>
 
         {/* Team */}
-        <article id="team" className="wrapper style2">
+        <article id="team" className="section team">
           <Team />
         </article>
 
