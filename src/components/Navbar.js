@@ -18,16 +18,16 @@ function Navbar({ currentSection }) {
       </Link>
       <ul className="navbar-right">
         <li className="navbar-li">
-          <Link className="navbar-link" to="about" spy={true} smooth={true} offset={0} duration={500}>About</Link>
+          <Link className="navbar-text" to="about" spy={true} smooth={true} offset={0} duration={500}>About</Link>
         </li>
         <li className="navbar-li">
-          <Link className="navbar-link" to="features" spy={true} smooth={true} offset={0} duration={500}>Features</Link>
+          <Link className="navbar-text" to="features" spy={true} smooth={true} offset={0} duration={500}>Features</Link>
         </li>
         <li className="navbar-li">
-          <Link className="navbar-link" to="design-process" spy={true} smooth={true} offset={0} duration={500}>Design Process</Link>
+          <Link className="navbar-text" to="design-process" spy={true} smooth={true} offset={0} duration={500}>Design Process</Link>
         </li>
         <li className="navbar-li">
-          <Link className="navbar-link" to="team" spy={true} smooth={true} offset={0} duration={500}>Team</Link>
+          <Link className="navbar-text" to="team" spy={true} smooth={true} offset={0} duration={500}>Team</Link>
         </li>
       </ul>
     </div>

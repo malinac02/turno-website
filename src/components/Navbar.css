@@ -26,32 +26,28 @@
     color: black;
 }
   
-  .navbar-left {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding-left: 10px;
-    width: 7%;
-  }
-  
-  .navbar-logo {
-    color: inherit;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 30px;
-    cursor: pointer;
-  }
-  
-  .navbar-li {
-    display: inline-block;
-    padding: 0 1.25rem;
-  }
-  
-  .navbar-li:hover, .navbar-logo:hover {
-    color: #faa6a6;
-  }
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 10px;
+  width: 7%;
+}
 
-  /* .navbar-right {
-    background-color: black;
-    height: 100%;
-  } */
+.navbar-logo {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navbar-li {
+  display: inline-block;
+  padding: 0 1.25rem;
+}
+
+.navbar-text:hover, .navbar-logo:hover {
+  color: #faa6a6;
+  cursor: pointer;
+}
