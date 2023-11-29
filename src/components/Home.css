@@ -52,6 +52,7 @@
     font-size: 5rem;
     margin-top: 10px;
     color: #ff7474;
+    font-family: "Bold";
 }
 
 .home-subtitle {
@@ -63,6 +64,7 @@
 .home-subtitle2 {
     color: white;
     font-size: 1rem;
+    font-family: "Light";
 }
 
 .iphone-image-container {

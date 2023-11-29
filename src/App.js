@@ -4,7 +4,9 @@ import Home from "./components/Home.js";
 import About from "./components/About.js";
 import DesignProcess from "./components/DesignProcess.js";
 import Team from "./components/Team.js";
+import "./fonts/Poppins-Bold.woff";
 import "./fonts/Poppins-Medium.woff";
+import "./fonts/Poppins-Light.woff";
 import "./App.css";
 import "./fonts.css";
 
