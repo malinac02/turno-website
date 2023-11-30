@@ -9,25 +9,25 @@ function Team() {
   const teammates = [
     {
       name: "Cecilia Conde",
-      role: "UI/UX Designer & Developer",
+      role: "User Researcher / UX Designer",
       linkedin: "https://www.linkedin.com/in/cecilia-conde-0877091b6/",
       image: CeciliaHeadshot,
     },
     {
       name: "Malina Calarco",
-      role: "UI/UX Designer & Developer",
+      role: "UI Designer / Developer",
       linkedin: "https://www.linkedin.com/in/malinacalarco/",
       image: MalinaHeadshot,
     },
     {
       name: "Nazanin Soltan",
-      role: "UI/UX Designer & Developer",
+      role: "User Researcher / UX Designer",
       linkedin: "https://www.linkedin.com/in/nazanin-soltan-a410b5197/",
       image: NazaninHeadshot,
     },
     {
       name: "Pedro Civita",
-      role: "UI/UX Designer & Developer",
+      role: "UI Designer / Developer",
       linkedin: "https://www.linkedin.com/in/pedro-civita/",
       image: PedroHeadshot,
     },
@@ -47,12 +47,14 @@ function Team() {
                 className="profile-image"
               />
             </div>
-            <h2 className="teammate-name">{teammate.name}</h2>
-            <h4 className="teammate-role">{teammate.role}</h4>
-            <a href={teammate.linkedin} className="linkedin">
-              <FaLinkedin className="linkedin-icon" />
-              <p>LinkedIn</p>
-            </a>
+            <div className="teammate-info-container">
+              <h2 className="teammate-name">{teammate.name}</h2>
+              <h4 className="teammate-role">{teammate.role}</h4>
+              <a href={teammate.linkedin} className="linkedin">
+                <FaLinkedin className="linkedin-icon" />
+                <p>LinkedIn</p>
+              </a>
+            </div>
           </div>
         ))}
       </div>
