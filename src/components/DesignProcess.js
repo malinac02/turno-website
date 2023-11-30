@@ -1,5 +1,5 @@
 import "./DesignProcess.css";
-import { FaFilePdf, FaFilePowerpoint, FaYoutube, FaFileAlt, FaFigma, FaFile, FaMobileAlt } from 'react-icons/fa';
+import { FaFilePdf, FaFilePowerpoint, FaYoutube, FaFileAlt, FaFigma, FaFile, FaMobileAlt, FaDownload, FaFileImage } from 'react-icons/fa';
 import A1pdf from "../pdfs/TurnoA1Slides.pdf";
 import A1ppt from "../pdfs/TurnoA1Slides.pptx";
 import A2pdf from "../pdfs/TurnoA2Slides.pdf";
@@ -21,7 +21,8 @@ function DesignProcess() {
       title: "Concept Video", 
       pdf: A4pdf,
       ppt: A4ppt,
-      youtube: "https://youtu.be/UodGwjzAHGI?si=aYD30W_8lNBmDW0v"
+      youtube: "https://youtu.be/UodGwjzAHGI?si=aYD30W_8lNBmDW0v",
+      download: "TurnoPromoFinal.mp4",
     },
     { title: "Lo-Fidelity Prototype", pdf: A5pdf, ppt: A5ppt },
     { 
@@ -70,6 +71,10 @@ function DesignProcess() {
         return <FaFigma className="process-icon"/>;
       case 'link':
         return <FaMobileAlt className="process-icon"/>;
+      case 'download':
+        return <FaDownload className="process-icon"/>;
+      case 'poster':
+        return <FaFileImage className="process-icon"/>;
       case 'readme':
       case 'script':
       case 'poster':
@@ -94,10 +99,17 @@ function DesignProcess() {
               <h3>{item.title}</h3>
               <p className="process-links">
                 {Object.keys(item).slice(1).map((link, index2) => (
-                  <a className="process-icon-link" key={index2} href={item[link]} alt={link}>
-                    {getIcon(link)}
-                    {link}
-                  </a>
+                  (link === "download") ? (
+                    <a key={index2} className="process-icon-link" href="TurnoPromoFinal.mp4" download>
+                      {getIcon(link)}
+                      <p>{link}</p>
+                    </a>
+                  ) : (
+                    <a key={index2} className="process-icon-link" href={item[link]} alt={link}>
+                      {getIcon(link)}
+                      <p>{link}</p>
+                    </a>
+                  )
                 ))}
               </p>
             </article>

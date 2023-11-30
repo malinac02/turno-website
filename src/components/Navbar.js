@@ -21,9 +21,6 @@ function Navbar({ currentSection }) {
           <Link className="navbar-text" to="about" spy={true} smooth={true} offset={0} duration={500}>About</Link>
         </li>
         <li className="navbar-li">
-          <Link className="navbar-text" to="features" spy={true} smooth={true} offset={0} duration={500}>Features</Link>
-        </li>
-        <li className="navbar-li">
           <Link className="navbar-text" to="design-process" spy={true} smooth={true} offset={0} duration={500}>Design Process</Link>
         </li>
         <li className="navbar-li">
