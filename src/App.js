@@ -43,32 +43,21 @@ function App() {
       <header>
         <Navbar currentSection={currentSection} />
       </header>
-
       <main className="is-preload">
         <article id="home" className="section home">
           <Home />
         </article>
-
-        <article id="about" className="section about">
+        <article id="about" className="section">
           <About />
         </article>
-
         <article id="design-process" className="section design-process">
           <DesignProcess />
         </article>
-
-        {/* Team */}
-        <article id="team" className="section team">
+        <article id="team" className="section">
           <Team />
         </article>
-
         <footer className="footer">
-          <ul id="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>
-              Design: <a href="http://html5up.net">HTML5 UP</a>
-            </li>
-          </ul>
+          <p className="footer-text">&copy; 2023 Turno. All rights reserved.</p>
         </footer>
       </main>
     </div>

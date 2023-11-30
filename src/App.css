@@ -3,11 +3,6 @@
   font-family: "Medium";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @font-face {
   font-family: "Bold";
   src: local("Poppins-Bold"),
@@ -41,105 +36,22 @@
   background-color: black;
 }
 
-.about {
-  background-color: white;
-}
-
-.features {
-  background-color: white;
-}
-
 .design-process {
   background-color: black;
 }
 
-.team {
-  
-}
-
 .footer {
-  min-height: 30vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  background: rgb(121, 121, 121);
+  background: black;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-text {
+  color: white;
+  font-family: "Light";
+  font-size: 13px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.wrapper {
-  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
-  padding: 8em 0 8em 0;
-  text-align: center;
-}
-
-  .wrapper.home {
-      /* background-color: #282c34; */
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: calc(10px + 2vmin);
-      /* color: white; */
-      background: rgb(255,255,255);
-      background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,116,116,1) 100%);
-
-  }
-
-  .wrapper.style1 {
-    background-image: none;
-    background-color: gray;
-    min-height: 80vh;
-  }
-
-  .wrapper.style2 {
-    background-color: #fafafa;
-    text-shadow: 1px 1px 0px #fff;
-    min-height: 80vh;
-  }
-
-  .wrapper.style3 {
-    background-color: #f4f4f4;
-    text-shadow: 1px 1px 0px #fff;
-    min-height: 80vh;
-  }
-
-  .wrapper.style4 {
-    background-color: #303030;
-    color: #999;
-    text-shadow: -1px -1px 0px #181818;
-  }
-
-    .wrapper.style4 h1, .wrapper.style4 h2, .wrapper.style4 h3, .wrapper.style4 h4, .wrapper.style4 h5, .wrapper.style4 h6 {
-      color: #fff;
-    }
-
-    .wrapper.style4 form input[type=text],
-    .wrapper.style4 form input[type=password],
-    .wrapper.style4 form select,
-    .wrapper.style4 form textarea {
-      border: none;
-      background: #282828;
-    }
-
-      .wrapper.style4 form input[type=text]:focus,
-      .wrapper.style4 form input[type=password]:focus,
-      .wrapper.style4 form select:focus,
-      .wrapper.style4 form textarea:focus {
-        background: #252525;
-      }
