@@ -1,6 +1,5 @@
 import './Home.css';
 import CasinoIcon from '@mui/icons-material/Casino';
-import TurnoLogo from "../logo.png";
 import TurnoHomeScreen from "../TurnoHomeScreen.png"
 
 
