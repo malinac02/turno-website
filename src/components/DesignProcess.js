@@ -88,9 +88,8 @@ function DesignProcess() {
     <div className="process-container">
       <h2 className="process-title">Our Process</h2>
       <p className="process-description">
-        Over ten weeks, we searched for problems, created prototypes and tested
-        them, to finally come up with our solution! Below is some of the
-        documentation of our work.
+        Over ten weeks, we searched for problems, created our solution, built and tested prototypes, and
+        finally created our solution! Below is documentation of all our work.
       </p>
       <div className="process-row">
         {items.map((item, index) => (

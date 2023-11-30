@@ -9,25 +9,29 @@ function Team() {
   const teammates = [
     {
       name: "Cecilia Conde",
-      role: "User Researcher / UX Designer",
+      role1: "User Researcher",
+      role2: "UI/UX Designer",
       linkedin: "https://www.linkedin.com/in/cecilia-conde-0877091b6/",
       image: CeciliaHeadshot,
     },
     {
       name: "Malina Calarco",
-      role: "UI Designer / Developer",
+      role1: "Mobile + Web Developer",
+      role2: "UI/UX Designer",
       linkedin: "https://www.linkedin.com/in/malinacalarco/",
       image: MalinaHeadshot,
     },
     {
       name: "Nazanin Soltan",
-      role: "User Researcher / UX Designer",
+      role1: "User Researcher",
+      role2: "UI/UX Designer",
       linkedin: "https://www.linkedin.com/in/nazanin-soltan-a410b5197/",
       image: NazaninHeadshot,
     },
     {
       name: "Pedro Civita",
-      role: "UI Designer / Developer",
+      role1: "Mobile Developer",
+      role2: "UI/UX Designer",
       linkedin: "https://www.linkedin.com/in/pedro-civita/",
       image: PedroHeadshot,
     },
@@ -49,10 +53,11 @@ function Team() {
             </div>
             <div className="teammate-info-container">
               <h2 className="teammate-name">{teammate.name}</h2>
-              <h4 className="teammate-role">{teammate.role}</h4>
+              <h4 className="teammate-role">{teammate.role1}</h4>
+              <h4 className="teammate-role">{teammate.role2}</h4>
               <a href={teammate.linkedin} className="linkedin">
                 <FaLinkedin className="linkedin-icon" />
-                <p>LinkedIn</p>
+                <p className="linkedin-text">LinkedIn</p>
               </a>
             </div>
           </div>

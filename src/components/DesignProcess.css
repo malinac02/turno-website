@@ -1,6 +1,10 @@
 .process-container {
   max-width: 1200px;
   padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .process-title {
@@ -12,6 +16,7 @@
   color: white;
   font-size: 16px;
   font-family: "Light";
+  max-width: 700px;
 }
 
 .process-row {
@@ -43,7 +48,6 @@
 }
 
 .process-box a {
-  /* color: #4e98e2; */
   color: white;
   font-size: 14px;
 }
