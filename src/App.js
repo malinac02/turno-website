@@ -17,12 +17,10 @@ function App() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
-      const aboutOffset = document.getElementById("about").offsetTop + 90;
-      const featuresOffset =
-        document.getElementById("features").offsetTop - 100;
-      const designProcessOffset =
-        document.getElementById("design-process").offsetTop - 40;
-      const teamOffset = document.getElementById("team").offsetTop - 35;
+      const aboutOffset = document.getElementById("about").offsetTop - 45;
+      const featuresOffset = document.getElementById("features").offsetTop - 100;
+      const designProcessOffset = document.getElementById("design-process").offsetTop - 45;
+      const teamOffset = document.getElementById("team").offsetTop - 45;
 
       if (scrollPosition < aboutOffset) {
         setCurrentSection("home");
