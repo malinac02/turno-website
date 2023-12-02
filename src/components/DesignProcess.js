@@ -16,27 +16,27 @@ import ConceptVideo from "../videos/TurnoConceptVideo.mp4";
 
 function DesignProcess() {
   const items = [
-    { title: "Needfinding", pdf: A1pdf, ppt: A1ppt },
-    { title: "POV, HMW, Experience Prototypes", pdf: A2pdf, ppt: A2ppt },
+    { title: "Needfinding", pdf: A1pdf, pptx: A1ppt },
+    { title: "POV, HMW, Experience Prototypes", pdf: A2pdf, pptx: A2ppt },
     { 
       title: "Concept Video", 
       pdf: A4pdf,
-      ppt: A4ppt,
+      pptx: A4ppt,
       youtube: "https://youtu.be/UodGwjzAHGI?si=aYD30W_8lNBmDW0v",
       save: ConceptVideo,
     },
-    { title: "Lo-Fidelity Prototype", pdf: A5pdf, ppt: A5ppt },
+    { title: "Lo-Fidelity Prototype", pdf: A5pdf, pptx: A5ppt },
     { 
       title: "Medium-Fidelity Prototype", 
       pdf: A6pdf, 
-      ppt: A6ppt, 
+      pptx: A6ppt, 
       figma: "https://www.figma.com/file/RDkSKAbDRIfpmg8ZrJzkEM/A6-Turno-Med-Fi-Prototype?type=design&node-id=1-451&mode=design&t=aLDPeAQr758KHLLV-0",
       readme: A6readme,
     },
     {
       title: "High-Fidelity Prototype", 
       pdf: null,
-      ppt: null,
+      pptx: null,
       link: null,
       readme: null,
     },
@@ -48,7 +48,7 @@ function DesignProcess() {
     {
       title: "Poster, Pitch, & Demo Video", 
       pdf: null,
-      ppt: null,
+      pptx: null,
       script: null,
       poster: null,
       video: null,
@@ -64,7 +64,7 @@ function DesignProcess() {
     switch(type) {
       case 'pdf':
         return <FaFilePdf className="process-icon-pdf"/>;
-      case 'ppt':
+      case 'pptx':
         return <FaFilePowerpoint className="process-icon"/>;
       case 'youtube':
       case 'video':
@@ -105,13 +105,35 @@ function DesignProcess() {
                 <h3>{item.title}</h3>
                 <p className="process-links">
                   {Object.keys(item).slice(1).map((link, index2) => (
-                    (link === "save") ? (
-                      <a key={index2} className="process-icon-link" href={ConceptVideo} alt={link} download>
+                    (link === "save") && (
+                      <a key={index2} 
+                        className="process-icon-link" 
+                        href={ConceptVideo} 
+                        alt={link} 
+                        download
+                      >
                         {getIcon(link)}
                         <p className="process-icon-text">{link}</p>
                       </a>
-                    ) : (
-                      <a key={index2} className="process-icon-link" href={item[link]} alt={link}>
+                    )
+                    || (link ==="pptx" || link === "docx") && (
+                      <a key={index2} 
+                        className="process-icon-link" 
+                        href={item[link]} 
+                        alt={link}
+                      >
+                        {getIcon(link)}
+                        <p>{link}</p>
+                      </a>
+                    )
+                    || (link) && (
+                      <a key={index2} 
+                        className="process-icon-link" 
+                        href={item[link]} 
+                        alt={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {getIcon(link)}
                         <p>{link}</p>
                       </a>
