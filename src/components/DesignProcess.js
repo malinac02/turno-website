@@ -1,6 +1,5 @@
 import "./DesignProcess.css";
-import { FaFilePdf, FaFilePowerpoint, FaFileWord, FaYoutube, FaFileLines, FaFigma, FaFile, FaMobile, FaFileImage } from 'react-icons/fa6';
-import { FaDownload, FaFileArrowDown } from 'react-icons/fa6';
+import { FaFilePdf, FaFilePowerpoint, FaFileWord, FaYoutube, FaFileLines, FaFigma, FaFile, FaMobile, FaFileImage, FaFileArrowDown } from 'react-icons/fa6';
 import A1pdf from "../pdfs/TurnoA1Slides.pdf";
 import A1ppt from "../pdfs/TurnoA1Slides.pptx";
 import A2pdf from "../pdfs/TurnoA2Slides.pdf";
@@ -12,6 +11,7 @@ import A5ppt from "../pdfs/TurnoA5Slides.pptx";
 import A6pdf from "../pdfs/TurnoA6Slides.pdf";
 import A6ppt from "../pdfs/TurnoA6Slides.pptx";
 import A6readme from "../pdfs/TurnoA6ReadMe.pdf";
+import ConceptVideo from "../videos/TurnoConceptVideo.mp4";
 
 
 function DesignProcess() {
@@ -23,7 +23,7 @@ function DesignProcess() {
       pdf: A4pdf,
       ppt: A4ppt,
       youtube: "https://youtu.be/UodGwjzAHGI?si=aYD30W_8lNBmDW0v",
-      save: "TurnoPromoFinal.mp4",
+      save: ConceptVideo,
     },
     { title: "Lo-Fidelity Prototype", pdf: A5pdf, ppt: A5ppt },
     { 
@@ -105,8 +105,8 @@ function DesignProcess() {
                 <h3>{item.title}</h3>
                 <p className="process-links">
                   {Object.keys(item).slice(1).map((link, index2) => (
-                    (link === "download") ? (
-                      <a key={index2} className="process-icon-link" href="TurnoPromoFinal.mp4" download>
+                    (link === "save") ? (
+                      <a key={index2} className="process-icon-link" href={ConceptVideo} alt={link} download>
                         {getIcon(link)}
                         <p className="process-icon-text">{link}</p>
                       </a>
