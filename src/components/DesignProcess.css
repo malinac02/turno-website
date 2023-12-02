@@ -7,9 +7,15 @@
   align-items: center;
 }
 
+.process-header {
+  margin-bottom: 20px;
+}
+
 .process-title {
   color: white;
   font-size: 40px;
+  margin-top: 15px;
+  margin-bottom: -10px;
 }
 
 .process-description {
@@ -28,13 +34,36 @@
 
 .process-column {
   width: calc(33.3333% - 40px);
-  margin: 15px;
+  margin: 13px;
+}
+
+@media screen and (max-width: 1050px) {
+  .process-column {
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .process-column {
+    width: calc(100% - 20px);
+  }
 }
 
 .process-box {
-  background-color: #333;
-  padding: 20px;
-  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.process-inner-box {
+  /* background-color: #333; */
+  background-color: #2e2e2e;
+  border-radius: 22px;
+  padding: 1px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .process-box h3 {
@@ -56,23 +85,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
+  width: 97%;
 }
 
 .process-icon-link {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Light";
+  /* font-family: "Medium"; */
   width: 50px;
   flex-shrink: 1;
+  text-decoration: none;
+}
+
+.process-icon-link:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.process-icon-link:hover p {
+  font-family: "Bold";
+  color: white;
+}
+
+.process-icon-link:hover .process-icon {
+  color: white;
+}
+
+.process-icon-link:hover .process-icon-pdf {
+  color: white;
 }
 
 .process-icon-link p {
+  margin-top: 3px;
+  margin-bottom: 0px;
   font-size: 12px;
+  color: #ff7474;
 }
 
 .process-icon {
   font-size: 35px;
   color: #ff7474;
+}
+
+.process-icon-pdf {
+  font-size: 35px;
+  color: #ff7474;
+  margin-left: 8px;
 }

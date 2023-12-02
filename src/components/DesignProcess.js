@@ -1,5 +1,6 @@
 import "./DesignProcess.css";
-import { FaFilePdf, FaFilePowerpoint, FaYoutube, FaFileAlt, FaFigma, FaFile, FaMobileAlt, FaDownload, FaFileImage } from 'react-icons/fa';
+import { FaFilePdf, FaFilePowerpoint, FaFileWord, FaYoutube, FaFileLines, FaFigma, FaFile, FaMobile, FaFileImage } from 'react-icons/fa6';
+import { FaDownload, FaFileArrowDown } from 'react-icons/fa6';
 import A1pdf from "../pdfs/TurnoA1Slides.pdf";
 import A1ppt from "../pdfs/TurnoA1Slides.pptx";
 import A2pdf from "../pdfs/TurnoA2Slides.pdf";
@@ -22,7 +23,7 @@ function DesignProcess() {
       pdf: A4pdf,
       ppt: A4ppt,
       youtube: "https://youtu.be/UodGwjzAHGI?si=aYD30W_8lNBmDW0v",
-      download: "TurnoPromoFinal.mp4",
+      save: "TurnoPromoFinal.mp4",
     },
     { title: "Lo-Fidelity Prototype", pdf: A5pdf, ppt: A5ppt },
     { 
@@ -42,6 +43,7 @@ function DesignProcess() {
     {
       title: "Heuristic Evalutation Synthesis", 
       pdf: null,
+      docx: null,
     },
     {
       title: "Poster, Pitch, & Demo Video", 
@@ -54,14 +56,14 @@ function DesignProcess() {
     {
       title: "Final Report", 
       pdf: null,
-      ppt: null,
+      docx: null,
     }
   ];
 
   const getIcon = (type) => {
     switch(type) {
       case 'pdf':
-        return <FaFilePdf className="process-icon"/>;
+        return <FaFilePdf className="process-icon-pdf"/>;
       case 'ppt':
         return <FaFilePowerpoint className="process-icon"/>;
       case 'youtube':
@@ -70,15 +72,17 @@ function DesignProcess() {
       case 'figma':
         return <FaFigma className="process-icon"/>;
       case 'link':
-        return <FaMobileAlt className="process-icon"/>;
-      case 'download':
-        return <FaDownload className="process-icon"/>;
+        return <FaMobile className="process-icon"/>;
+      case 'save':
+        return <FaFileArrowDown className="process-icon"/>;
       case 'poster':
         return <FaFileImage className="process-icon"/>;
+      case 'docx':
+        return <FaFileWord className="process-icon"/>;
       case 'readme':
       case 'script':
       case 'poster':
-        return <FaFileAlt className="process-icon"/>;
+        return <FaFileLines className="process-icon"/>;
       default:
         return <FaFile className="process-icon"/>;
     }
@@ -86,31 +90,35 @@ function DesignProcess() {
 
   return (
     <div className="process-container">
-      <h2 className="process-title">Our Process</h2>
-      <p className="process-description">
-        Over ten weeks, we searched for problems, created our solution, built and tested prototypes, and
-        finally created our solution! Below is documentation of all our work.
-      </p>
+      <div className="process-header">
+        <h2 className="process-title">Our Process</h2>
+        <p className="process-description">
+          Over ten weeks, we searched for problems, brainstormed solutions, built and tested prototypes, and
+          finally created the Turno app. Below is documentation of all our work.
+        </p>
+      </div>
       <div className="process-row">
         {items.map((item, index) => (
           <div key={index} className="process-column">
             <article className="process-box">
-              <h3>{item.title}</h3>
-              <p className="process-links">
-                {Object.keys(item).slice(1).map((link, index2) => (
-                  (link === "download") ? (
-                    <a key={index2} className="process-icon-link" href="TurnoPromoFinal.mp4" download>
-                      {getIcon(link)}
-                      <p>{link}</p>
-                    </a>
-                  ) : (
-                    <a key={index2} className="process-icon-link" href={item[link]} alt={link}>
-                      {getIcon(link)}
-                      <p>{link}</p>
-                    </a>
-                  )
-                ))}
-              </p>
+              <div className="process-inner-box">
+                <h3>{item.title}</h3>
+                <p className="process-links">
+                  {Object.keys(item).slice(1).map((link, index2) => (
+                    (link === "download") ? (
+                      <a key={index2} className="process-icon-link" href="TurnoPromoFinal.mp4" download>
+                        {getIcon(link)}
+                        <p className="process-icon-text">{link}</p>
+                      </a>
+                    ) : (
+                      <a key={index2} className="process-icon-link" href={item[link]} alt={link}>
+                        {getIcon(link)}
+                        <p>{link}</p>
+                      </a>
+                    )
+                  ))}
+                </p>
+              </div>
             </article>
           </div>
         ))}
