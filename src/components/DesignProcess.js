@@ -61,7 +61,7 @@ function DesignProcess() {
       expo: null,
     },
     {
-      title: "Heuristic Evalutation Synthesis", 
+      title: "Heuristic Evaluation Synthesis", 
       subtitle1: "Report:",
       pdf: null,
       docx: null,
