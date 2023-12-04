@@ -23,6 +23,11 @@
   color: black;
   background-color: white;
 }
+
+.salmon-navbar {
+  color: white;
+  background-color: #FF7474;
+}
   
 .navbar-left {
   display: flex;

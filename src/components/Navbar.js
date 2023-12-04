@@ -6,6 +6,8 @@ function Navbar({ currentSection }) {
   let navbarClass = "navbar-container";
   if (currentSection === "home" || currentSection === "design-process") {
     navbarClass += " white-text-navbar";
+  } else if (currentSection === "demo") {
+    navbarClass += " salmon-navbar";
   } else {
     navbarClass += " black-text-navbar";
   }
@@ -22,6 +24,9 @@ function Navbar({ currentSection }) {
         </li>
         <li className="navbar-li">
           <Link className="navbar-text" to="design-process" spy={true} smooth={true} offset={0} duration={500}>Design Process</Link>
+        </li>
+        <li className="navbar-li">
+          <Link className="navbar-text" to="demo" spy={true} smooth={true} offset={0} duration={500}>Demo</Link>
         </li>
         <li className="navbar-li">
           <Link className="navbar-text" to="team" spy={true} smooth={true} offset={0} duration={500}>Team</Link>

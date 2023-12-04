@@ -1,5 +1,5 @@
 import "./DesignProcess.css";
-import { FaFilePdf, FaFilePowerpoint, FaFileWord, FaYoutube, FaFigma, FaFile, FaMobile, FaFileImage, FaFileArrowDown } from 'react-icons/fa6';
+import { FaFilePdf, FaFilePowerpoint, FaFileWord, FaYoutube, FaFigma, FaFile, FaMobile, FaFileImage, FaFileArrowDown, FaFileLines } from 'react-icons/fa6';
 import A1pdf from "../pdfs/TurnoA1Slides.pdf";
 import A1ppt from "../pdfs/TurnoA1Slides.pptx";
 import A2pdf from "../pdfs/TurnoA2Slides.pdf";
@@ -11,6 +11,11 @@ import A5ppt from "../pdfs/TurnoA5Slides.pptx";
 import A6pdf from "../pdfs/TurnoA6Slides.pdf";
 import A6ppt from "../pdfs/TurnoA6Slides.pptx";
 import A6readme from "../pdfs/TurnoA6ReadMe.pdf";
+import A8pdf from "../pdfs/TurnoA8Slides.pdf";
+import A8ppt from "../pdfs/TurnoA8Slides.pptx";
+
+import A9HEpdf from "../pdfs/TurnoHE.pdf";
+import A9HEdocx from "../pdfs/TurnoHE.docx";
 import ConceptVideo from "../videos/TurnoConceptVideo.mp4";
 
 function DesignProcess() {
@@ -18,35 +23,35 @@ function DesignProcess() {
     { 
       title: "Needfinding", 
       // subtitle1: "Slides:",
-      pdf: A1pdf, 
-      pptx: A1ppt,
+      "slides pdf": A1pdf, 
+      "slides pptx": A1ppt,
     },
     { 
       title: "POV, HMW, Experience Prototypes", 
       // subtitle1: "Slides:",
-      pdf: A2pdf, 
-      pptx: A2ppt,
+      "slides pdf": A2pdf, 
+      "slides pptx": A2ppt,
     },
     { 
       title: "Concept Video", 
       // subtitle1: "Slides:",
-      pdf: A4pdf,
-      pptx: A4ppt,
+      "slides pdf": A4pdf,
+      "slides pptx": A4ppt,
       // subtitle2: "Video:",
       youtube: "https://youtu.be/UodGwjzAHGI?si=aYD30W_8lNBmDW0v",
-      save: ConceptVideo,
+      "save video": ConceptVideo,
     },
     { 
       title: "Lo-Fidelity Prototype", 
       // subtitle1: "Slides:",
-      pdf: A5pdf, 
-      pptx: A5ppt,
+      "slides pdf": A5pdf, 
+      "slides pptx": A5ppt,
     },
     { 
       title: "Medium-Fidelity Prototype", 
       // subtitle1: "Slides:",
-      pdf: A6pdf, 
-      pptx: A6ppt, 
+      "slides pdf": A6pdf, 
+      "slides pptx": A6ppt, 
       // subtitle2: "Med-Fi:",
       figma: "https://www.figma.com/file/RDkSKAbDRIfpmg8ZrJzkEM/A6-Turno-Med-Fi-Prototype?type=design&node-id=1-451&mode=design&t=aLDPeAQr758KHLLV-0",
       readme: A6readme,
@@ -54,29 +59,29 @@ function DesignProcess() {
     {
       title: "High-Fidelity Prototype", 
       // subtitle1: "Slides:",
-      pdf: null,
-      pptx: null,
+      "slides pdf": A8pdf,
+      "slides pptx": A8ppt,
       // subtitle2: "Hi-Fi:",
+      prototype: null,
       readme: null,
-      expo: null,
     },
     {
       title: "Heuristic Evaluation Synthesis", 
       // subtitle1: "Report:",
-      pdf: null,
-      docx: null,
+      "HE pdf": A9HEpdf,
+      "HE docx": A9HEdocx,
     },
     {
       title: "Poster, Pitch, & Demo Video", 
       // subtitle1: "Pitch Slide:",
-      pdf: null,
-      pptx: null,
+      "poster pdf": null,
+      "poster pptx": null,
       // subtitle2: "Poster:",
-      script: null,
-      poster: null,
+      "pitch pdf": null,
+      "pitch pptx": null,
       // subtitle3: "Demo Video:",
       demo: null,
-      save: null,
+      "save video": null,
     },
     {
       title: "Final Report", 
@@ -89,23 +94,31 @@ function DesignProcess() {
   const getIcon = (type) => {
     switch(type) {
       case 'pdf':
+      case 'slides pdf':
+      case 'poster pdf':
+      case 'pitch pdf':
+      case 'HE pdf':
         return <FaFilePdf className="process-icon-pdf"/>;
-      case 'pptx':
+      case 'slides pptx':
+      case 'poster pptx':
+      case 'pitch pptx':
         return <FaFilePowerpoint className="process-icon"/>;
       case 'youtube':
       case 'demo':
         return <FaYoutube className="process-icon"/>;
       case 'figma':
         return <FaFigma className="process-icon"/>;
-      case 'expo':
+      case 'prototype':
         return <FaMobile className="process-icon"/>;
-      case 'save':
+      case 'save video':
         return <FaFileArrowDown className="process-icon"/>;
       case 'poster':
         return <FaFileImage className="process-icon"/>;
       case 'docx':
+      case 'HE docx':
         return <FaFileWord className="process-icon"/>;
       case 'readme':
+        return <FaFileLines className="process-icon"/>;
       case 'script':
       case 'poster':
         return <FaFileImage className="process-icon"/>;
@@ -133,9 +146,8 @@ function DesignProcess() {
               <div className="process-links-container">
                   <h3>{item.title}</h3>
                   <p className="process-links">
-                    <div className="process-text">{item.subtitle1}</div>
                     {Object.keys(item).slice(1).map((link, index2) => (
-                      (link === "pptx" || link === "docx") && (
+                      (link === "slides pptx" || link === "poster pptx" || link === "pitch pptx" || link === "docx" || link === "HE docx") && (
                         <a key={index2} 
                           className="process-icon-link" 
                           href={item[link]} 
@@ -144,7 +156,7 @@ function DesignProcess() {
                           {getIcon(link)}
                           <p>{link}</p>
                         </a>
-                      ) || (link === "save") && (
+                      ) || (link === "save video") && (
                         <a key={index2} 
                           className="process-icon-link" 
                           href={ConceptVideo} 
@@ -152,9 +164,9 @@ function DesignProcess() {
                           download
                         >
                           {getIcon(link)}
-                          <p className="process-icon-text">{link}</p>
+                          <p>{link}</p>
                         </a>
-                      ) || (link !== "pptx" && link !== "docx" && link !== "save") && (
+                      ) || (link !== "pptx" && link !== "docx" && link !== "save video") && (
                         <a key={index2} 
                           className="process-icon-link" 
                           href={item[link]} 

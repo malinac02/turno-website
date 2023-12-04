@@ -43,6 +43,12 @@
   /* background: url('images/ProgressPath.png') center center/cover no-repeat; */
 }
 
+.demo {
+  background-color: #FF7474;
+  /* background: url('images/ProgressPath.png') center center/cover no-repeat; */
+}
+
+
 .footer {
   min-height: 20vh;
   display: flex;

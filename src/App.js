@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar.js";
 import Home from "./components/Home.js";
 import About from "./components/About.js";
 import DesignProcess from "./components/DesignProcess.js";
+import Demo from "./components/Demo.js";
 import Team from "./components/Team.js";
 import "./fonts/Poppins-Bold.woff";
 import "./fonts/Poppins-Medium.woff";
@@ -19,14 +20,17 @@ function App() {
 
       const aboutOffset = document.getElementById("about").offsetTop - 45;
       const designProcessOffset = document.getElementById("design-process").offsetTop - 45;
+      const demoOffset = document.getElementById("demo").offsetTop - 45;
       const teamOffset = document.getElementById("team").offsetTop - 45;
 
       if (scrollPosition < aboutOffset) {
         setCurrentSection("home");
       } else if (scrollPosition < designProcessOffset) {
         setCurrentSection("about");
-      } else if (scrollPosition < teamOffset) {
+      } else if (scrollPosition < demoOffset) {
         setCurrentSection("design-process");
+      } else if (scrollPosition < teamOffset) {
+        setCurrentSection("demo");
       } else {
         setCurrentSection("team");
       }
@@ -52,6 +56,9 @@ function App() {
         </article>
         <article id="design-process" className="section design-process">
           <DesignProcess />
+        </article>
+        <article id="demo" className="section demo">
+          <Demo />
         </article>
         <article id="team" className="section">
           <Team />
