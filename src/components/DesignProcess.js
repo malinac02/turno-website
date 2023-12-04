@@ -129,9 +129,9 @@ function DesignProcess() {
           <div key={index} className="process-column">
             <article className="process-box">
               <div className="process-box-title">
-                <h3>{item.title}</h3>
               </div>
               <div className="process-links-container">
+                  <h3>{item.title}</h3>
                   <p className="process-links">
                     <div className="process-text">{item.subtitle1}</div>
                     {Object.keys(item).slice(1).map((link, index2) => (
