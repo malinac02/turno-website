@@ -17,69 +17,70 @@ function DesignProcess() {
   const items = [
     { 
       title: "Needfinding", 
-      subtitle1: "Slides:",
+      // subtitle1: "Slides:",
       pdf: A1pdf, 
       pptx: A1ppt,
     },
     { 
       title: "POV, HMW, Experience Prototypes", 
-      subtitle1: "Slides:",
+      // subtitle1: "Slides:",
       pdf: A2pdf, 
       pptx: A2ppt,
     },
     { 
       title: "Concept Video", 
-      subtitle1: "Slides:",
+      // subtitle1: "Slides:",
       pdf: A4pdf,
       pptx: A4ppt,
-      subtitle2: "Video:",
+      // subtitle2: "Video:",
       youtube: "https://youtu.be/UodGwjzAHGI?si=aYD30W_8lNBmDW0v",
       save: ConceptVideo,
     },
     { 
       title: "Lo-Fidelity Prototype", 
-      subtitle1: "Slides:",
+      // subtitle1: "Slides:",
       pdf: A5pdf, 
       pptx: A5ppt,
     },
     { 
       title: "Medium-Fidelity Prototype", 
-      subtitle1: "Slides:",
+      // subtitle1: "Slides:",
       pdf: A6pdf, 
       pptx: A6ppt, 
-      subtitle2: "Med-Fi:",
+      // subtitle2: "Med-Fi:",
       figma: "https://www.figma.com/file/RDkSKAbDRIfpmg8ZrJzkEM/A6-Turno-Med-Fi-Prototype?type=design&node-id=1-451&mode=design&t=aLDPeAQr758KHLLV-0",
       readme: A6readme,
     },
     {
       title: "High-Fidelity Prototype", 
-      subtitle1: "Slides:",
+      // subtitle1: "Slides:",
       pdf: null,
       pptx: null,
-      subtitle2: "Hi-Fi:",
+      // subtitle2: "Hi-Fi:",
       readme: null,
       expo: null,
     },
     {
       title: "Heuristic Evaluation Synthesis", 
-      subtitle1: "Report:",
+      // subtitle1: "Report:",
       pdf: null,
       docx: null,
     },
     {
       title: "Poster, Pitch, & Demo Video", 
-      subtitle1: "Pitch Slide:",
+      // subtitle1: "Pitch Slide:",
       pdf: null,
       pptx: null,
-      subtitle2: "Poster:",
+      // subtitle2: "Poster:",
       script: null,
       poster: null,
-      subtitle3: "Demo Video:",
+      // subtitle3: "Demo Video:",
       demo: null,
+      save: null,
     },
     {
       title: "Final Report", 
-      subtitle1: "Report:",
+      // subtitle1: "Report:",
       pdf: null,
       docx: null,
     }
@@ -133,7 +134,40 @@ function DesignProcess() {
               <div className="process-links-container">
                   <p className="process-links">
                     <div className="process-text">{item.subtitle1}</div>
-                    {Object.keys(item).slice(2, 4).map((link, index2) => (
+                    {Object.keys(item).slice(1).map((link, index2) => (
+                      (link === "pptx" || link === "docx") && (
+                        <a key={index2} 
+                          className="process-icon-link" 
+                          href={item[link]} 
+                          alt={link}
+                        >
+                          {getIcon(link)}
+                          <p>{link}</p>
+                        </a>
+                      ) || (link === "save") && (
+                        <a key={index2} 
+                          className="process-icon-link" 
+                          href={ConceptVideo} 
+                          alt={link} 
+                          download
+                        >
+                          {getIcon(link)}
+                          <p className="process-icon-text">{link}</p>
+                        </a>
+                      ) || (link !== "pptx" && link !== "docx" && link !== "save") && (
+                        <a key={index2} 
+                          className="process-icon-link" 
+                          href={item[link]} 
+                          alt={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {getIcon(link)}
+                          <p>{link}</p>
+                        </a>
+                    )))}
+                 
+                    {/* {Object.keys(item).slice(2, 4).map((link, index2) => (
                       (link === "pptx" || link === "docx") ? (
                         <a key={index2} 
                           className="process-icon-link" 
@@ -209,7 +243,7 @@ function DesignProcess() {
                           <p>{link}</p>
                         </a>
                       )
-                    ))}
+                    ))} */}
                   </p>
                 </div>
             </article>
