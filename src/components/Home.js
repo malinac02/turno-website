@@ -1,6 +1,7 @@
 import './Home.css';
 import CasinoIcon from '@mui/icons-material/Casino';
 import TurnoHomeScreen from "../TurnoHomeScreen.png"
+import TurnoHomeScreen2 from "../TurnoHomeScreen2.png"
 
 
 function Home() {
@@ -23,7 +24,7 @@ function Home() {
           </p>
         </div>
         <div className="iphone-image-container">
-          <img src={TurnoHomeScreen} alt="Turno Home Screen" className="iphone-image" />
+          <img src={TurnoHomeScreen2} alt="Turno Home Screen" className="iphone-image" />
         </div>
       </div>
     </div>

@@ -17,7 +17,8 @@
 
 .white-text-navbar {
   color: white;
-  background-color: black;
+  /* background-color: black; */
+  background-color: #4C5994;
 }
 
 .black-text-navbar {

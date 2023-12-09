@@ -34,12 +34,17 @@
 
 .home {
   min-height: 100vh;
-  background-color: black;
+  /* background-color: black; */
+  
+  background-color: #4C5994;
+
+
   /* background: url('images/ProgressPathTransparent.png') center center/cover no-repeat; */
 }
 
 .design-process {
-  background-color: black;
+  /* background-color: black; */
+  background-color: #4C5994;
   /* background: url('images/ProgressPath.png') center center/cover no-repeat; */
 }
 

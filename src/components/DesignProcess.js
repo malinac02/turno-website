@@ -13,10 +13,16 @@ import A6ppt from "../pdfs/TurnoA6Slides.pptx";
 import A6readme from "../pdfs/TurnoA6ReadMe.pdf";
 import A8pdf from "../pdfs/TurnoA8Slides.pdf";
 import A8ppt from "../pdfs/TurnoA8Slides.pptx";
+import A8readme from "../pdfs/TurnoA8ReadMe.pdf";
+import A10pitchpdf from "../pdfs/TurnoA10PitchSlide.pdf"
+import A10pitchppt from "../pdfs/TurnoA10PitchSlide.pptx"
+import A10posterpdf from "../pdfs/TurnoA10Poster.pdf"
+import A10posterppt from "../pdfs/TurnoA10Poster.pptx"
 
 import A9HEpdf from "../pdfs/TurnoHE.pdf";
 import A9HEdocx from "../pdfs/TurnoHE.docx";
 import ConceptVideo from "../videos/TurnoConceptVideo.mp4";
+
 
 function DesignProcess() {
   const items = [
@@ -62,8 +68,8 @@ function DesignProcess() {
       "slides pdf": A8pdf,
       "slides pptx": A8ppt,
       // subtitle2: "Hi-Fi:",
-      prototype: null,
-      readme: null,
+      "hi-fi": null,
+      readme: A8readme,
     },
     {
       title: "Heuristic Evaluation Synthesis", 
@@ -74,14 +80,14 @@ function DesignProcess() {
     {
       title: "Poster, Pitch, & Demo Video", 
       // subtitle1: "Pitch Slide:",
-      "poster pdf": null,
-      "poster pptx": null,
+      "poster pdf": A10posterpdf,
+      "poster pptx": A10posterppt,
       // subtitle2: "Poster:",
-      "pitch pdf": null,
-      "pitch pptx": null,
+      "pitch pdf": A10pitchpdf,
+      "pitch pptx": A10pitchppt,
       // subtitle3: "Demo Video:",
-      demo: null,
-      "save video": null,
+      demo: "https://www.youtube.com/watch?v=UQ6yqcV6l7c&t=8s",
+      "save video": ConceptVideo,
     },
     {
       title: "Final Report", 
@@ -108,7 +114,7 @@ function DesignProcess() {
         return <FaYoutube className="process-icon"/>;
       case 'figma':
         return <FaFigma className="process-icon"/>;
-      case 'prototype':
+      case 'hi-fi':
         return <FaMobile className="process-icon"/>;
       case 'save video':
         return <FaFileArrowDown className="process-icon"/>;

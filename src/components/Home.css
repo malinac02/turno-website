@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 3rem;
-    margin-left: 8rem;
+    margin-left: 2rem;
 }
 
 .white-navbar {
@@ -70,7 +70,7 @@
 .iphone-image-container {
     flex: 1;
     padding: 20px;
-    margin-left: -100px;
+    margin-left: -20px;
 }
 
 .iphone-image {

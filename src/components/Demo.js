@@ -11,16 +11,26 @@ function Demo() {
         </p>
       </div>
       <div className="about-video-container">
-        <iframe
+        {/* <iframe
           width="550"
           height="300"
-          src="https://www.youtube.com/embed/v4gpvESwjq4?si=Y6twkmt2yCCPUcJz"
+          src="https://www.youtube.com/watch?v=UQ6yqcV6l7c"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
           className="about-video"
-        />
+        /> */}
+        <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/UQ6yqcV6l7c?si=0q8f0q0FXjnWw1Nv" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen
+          className="about-video">
+        </iframe>
       </div>
     </div>
   );
