@@ -18,6 +18,7 @@ import A10pitchpdf from "../pdfs/TurnoA10PitchSlide.pdf"
 import A10pitchppt from "../pdfs/TurnoA10PitchSlide.pptx"
 import A10posterpdf from "../pdfs/TurnoA10Poster.pdf"
 import A10posterppt from "../pdfs/TurnoA10Poster.pptx"
+import A10reportpdf from "../pdfs/TurnoA10Report.pdf"
 
 import A9HEpdf from "../pdfs/TurnoHE.pdf";
 import A9HEdocx from "../pdfs/TurnoHE.docx";
@@ -92,7 +93,7 @@ function DesignProcess() {
     {
       title: "Final Report", 
       // subtitle1: "Report:",
-      pdf: null,
+      pdf: A10reportpdf,
       docx: null,
     }
   ];
