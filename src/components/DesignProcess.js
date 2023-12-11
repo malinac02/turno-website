@@ -23,6 +23,7 @@ import A10reportpdf from "../pdfs/TurnoA10Report.pdf"
 import A9HEpdf from "../pdfs/TurnoHE.pdf";
 import A9HEdocx from "../pdfs/TurnoHE.docx";
 import ConceptVideo from "../videos/TurnoConceptVideo.mp4";
+import TurnoDemo from "../videos/TurnoDemo.mp4";
 
 
 function DesignProcess() {
@@ -88,7 +89,7 @@ function DesignProcess() {
       "pitch pptx": A10pitchppt,
       // subtitle3: "Demo Video:",
       demo: "https://www.youtube.com/watch?v=UQ6yqcV6l7c&t=8s",
-      "save video": ConceptVideo,
+      "save video": TurnoDemo,
     },
     {
       title: "Final Report", 
